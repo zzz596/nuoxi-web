@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner {
+    width: 100%;
+    height: 380px;
+    background: url(../images/banner-works.jpg) no-repeat center;
+    background-size: cover;
+    position: relative; 
+}
+.banner h1 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 42px;
+    text-shadow: 2px 2px 8px #000;
+}
+.nav {
+    width: 100%;
+    height: 60px;
+    background-color: #8B4513;
+}
+.nav ul {
+    list-style: none;
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav li {
+    float: left;
+    width: 20%;
+    line-height: 60px;
+    text-align: center;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.nav a:hover {
+    background-color: #A0522D;
+}
+.works-container {
+    width: 1200px;
+    margin: 30px auto;
+}
+.works-category {
+    margin-bottom: 20px;
+}
+.works-category h2 {
+    color: #8B4513;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #E6E6FA;
+    padding-bottom: 10px;
+}
+.works-list {
+    overflow: hidden;
+}
+.works-item {
+    width: 23%;
+    float: left;
+    margin-right: 2.66%;
+    margin-bottom: 20px;
+    position: relative; 
+}
+.works-item:nth-child(4n) {
+    margin-right: 0;
+}
+.works-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.works-item .works-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.works-item:hover .works-desc { 
+    opacity: 1;
+}
+
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    margin-top: 50px;
+}
+.footer-content {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-left p {
+    line-height: 1.8;
+    font-size: 14px;
+    color: #ccc;
+}
+.footer-right p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+/* 剧目分类容器 */
+.works-category {
+  margin-bottom: 40px;
+}
+
+/* 分类标题 */
+.works-category h3 {
+  text-align: left; /* 标题保持左对齐，和你截图一致 */
+  margin-bottom: 15px;
+  color: #8b3100;
+}
+
+/* 卡片列表容器 - 关键居中代码 */
+.works-list {
+  display: flex;
+  justify-content: center; /* 让卡片在容器里水平居中 */
+  gap: 20px; /* 卡片之间的间距 */
+  flex-wrap: wrap; /* 自动换行，适配不同屏幕 */
+}
+
+/* 单个卡片样式 */
+.work-item {
+  width: 280px; /* 固定卡片宽度 */
+  text-align: center; /* 图片和文字居中 */
+}
+
+.work-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* 保证图片不变形 */
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
