@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <title>傩戏 - 传承人介绍</title>
     <link rel="stylesheet" href="css/inheritor.css">
+    <style>
+        /* 👇 只加这一段CSS，直接解决布局问题，不用改你原有的inheritor.css */
+        .card-body {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            padding: 20px 30px;
+        }
+        .info-text {
+            flex: 1;
+            min-width: 0; /* 防止文字溢出 */
+        }
+        .stat-card-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 120px;
+            flex-shrink: 0; /* 卡片不被挤压 */
+        }
+        .stat-item {
+            background: #f8f5f0;
+            border-left: 4px solid #1a3b7a; /* 统一你页面的蓝色主题 */
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        .stat-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a3b7a;
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 13px;
+            color: #666;
+        }
+    </style>
 </head>
-
 <body>
+    <button id="goTop">↑</button>
     <div class="banner">
         <h1>傩戏 - 传承人介绍</h1>
     </div>
@@ -15,8 +52,8 @@
     <div class="nav">
         <ul>
             <li><a href="index.html">首页</a></li>
-            <li><a href="skill.html">艺术特征</a></li>
-          <li><a href="skill.html" class="active">传承人介绍</a></li>
+            <li><a href="art.html">艺术特征</a></li>
+            <li><a href="inheritor.html" class="active">传承人介绍</a></li>
             <li><a href="works.html">精选剧目</a></li>
             <li><a href="contact.html">联系我们</a></li>
         </ul>
@@ -32,6 +69,7 @@
     </div>
 
     <div class="inheritor-container">
+        <!-- 池州傩戏 刘臣瑜 -->
         <div class="inheritor-group" id="chizhou">
             <h2 class="group-title">池州傩戏传承人</h2>
             <div class="card-list">
@@ -41,37 +79,57 @@
                         <div class="card-title">
                             <h3>刘臣瑜</h3>
                             <span class="level-tag">国家级传承人</span>
-                            <span class="skill-tag">池州傩戏</span>
+                            <span class="art-tag">池州傩戏</span>
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="basic-info">
-                            <p><strong>出生年份：</strong>1930年</p>
-                            <p><strong>民族：</strong>汉族</p>
-                            <p><strong>籍贯：</strong>安徽</p>
+                        <!-- 左侧：原有文字内容（结构完全修复） -->
+                        <div class="info-text">
+                            <div class="basic-info">
+                                <p><strong>出生年份：</strong>1930年</p>
+                                <p><strong>民族：</strong>汉族</p>
+                                <p><strong>籍贯：</strong>安徽</p>
+                            </div>
+                            <h4>传承资历</h4>
+                            <ul>
+                                <li>第二批国家级非遗傩戏（池州傩戏）代表性传承人</li>
+                                <li>自幼受宗族熏陶，17岁登台，精通唱腔与舞台表演</li>
+                                <li>擅长司鼓，兼任宗族傩事执事，精通全套傩仪流程</li>
+                            </ul>
+                            <h4>技艺专长</h4>
+                            <ul>
+                                <li>熟练复刻宗族全套傩戏剧目，唱腔身段原汁原味</li>
+                                <li>舞台把控力强，仪式表演庄重规整，古韵十足</li>
+                            </ul>
+                            <h4>传承贡献</h4>
+                            <ul>
+                                <li>牵头恢复中断数十年的池州傩戏演出活动</li>
+                                <li>凭记忆复原失传剧本、傩舞词段，抢救非遗史料</li>
+                                <li>深耕傩戏教学，培养十余位本土后继传承人才</li>
+                                <li>亮相国际傩文化艺术周，助力傩戏对外文化交流</li>
+                            </ul>
                         </div>
-                        <h4>传承资历</h4>
-                         <ul>
-                            <li>第二批国家级非遗傩戏（池州傩戏）代表性传承人</li>
-                            <li>自幼受宗族熏陶，17岁登台，精通唱腔与舞台表演</li>
-                            <li>擅长司鼓，兼任宗族傩事执事，精通全套傩仪流程</li>
-                        <h4>技艺专长</h4>
-                         <ul>
-                            <li>熟练复刻宗族全套傩戏剧目，唱腔身段原汁原味</li>
-                            <li>舞台把控力强，仪式表演庄重规整，古韵十足</li>
-                        </p>
-                        <h4>传承贡献</h4>
-                        <ul>
-                            <li>牵头恢复中断数十年的池州傩戏演出活动</li>
-                            <li>凭记忆复原失传剧本、傩舞词段，抢救非遗史料</li>
-                            <li>深耕傩戏教学，培养十余位本土后继传承人才</li>
-                            <li>亮相国际傩文化艺术周，助力傩戏对外文化交流</li>
-                        </ul>
+                        <!-- 右侧：3个垂直数据卡片 -->
+                        <div class="stat-card-group">
+                            <div class="stat-item">
+                                <div class="stat-number">70年</div>
+                                <div class="stat-label">从艺年限</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">16位</div>
+                                <div class="stat-label">培养弟子</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">30部</div>
+                                <div class="stat-label">复原剧目</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- 德江傩堂戏 安永柏 -->
         <div class="inheritor-group" id="dejiang">
             <h2 class="group-title">德江傩堂戏传承人</h2>
             <div class="card-list">
@@ -81,76 +139,107 @@
                         <div class="card-title">
                             <h3>安永柏</h3>
                             <span class="level-tag">国家级传承人</span>
-                            <span class="skill-tag">德江傩堂戏</span>
+                            <span class="art-tag">德江傩堂戏</span>
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="basic-info">
-                            <p><strong>出生年份：</strong>1964年</p>
-                            <p><strong>民族：</strong>土家族</p>
-                            <p><strong>籍贯：</strong>贵州</p>
+                        <div class="info-text">
+                            <div class="basic-info">
+                                <p><strong>出生年份：</strong>1964年</p>
+                                <p><strong>民族：</strong>土家族</p>
+                                <p><strong>籍贯：</strong>贵州</p>
+                            </div>
+                            <h4>传承资历</h4>
+                            <ul>
+                                <li>国家级非遗德江傩堂戏代表性传承人，出身傩戏世家</li>
+                                <li>12岁随父学艺，深耕傩戏技艺数十年，功底深厚</li>
+                                <li>精通全套傩祭法事、傩舞、傩技，传承体系完整</li>
+                            </ul>
+                            <h4>技艺专长</h4>
+                            <ul>
+                                <li>擅长傩技绝活表演，仪式舞步规范、气场神秘</li>
+                                <li>精通土语唱腔，完美还原傩堂戏原生态演唱韵味</li>
+                                <li>深谙面具文化，能精准拿捏各类神祇角色表演精髓</li>
+                            </ul>
+                            <h4>传承贡献</h4>
+                            <ul>
+                                <li>坚持口传心授，带徒传艺毫无保留，壮大传承队伍</li>
+                                <li>创办傩戏班，搭建平台培养青少年傩戏爱好者</li>
+                                <li>坚守原生态传承，守护傩堂戏古老文化根脉</li>
+                            </ul>
                         </div>
-                        <h4>传承资历</h4>
-                         <ul>
-                            <li>国家级非遗德江傩堂戏代表性传承人，出身傩戏世家</li>
-                            <li>12岁随父学艺，深耕傩戏技艺数十年，功底深厚</li>
-                            <li>精通全套傩祭法事、傩舞、傩技，传承体系完整</li>
-                        <h4>技艺专长</h4>
-                         <ul>
-                            <li>擅长傩技绝活表演，仪式舞步规范、气场神秘</li>
-                            <li>精通土语唱腔，完美还原傩堂戏原生态演唱韵味</li>
-                            <li>深谙面具文化，能精准拿捏各类神祇角色表演精髓</li>
-                        </p>
-                        <h4>传承贡献</h4>
-                        <ul>
-                            <li>坚持口传心授，带徒传艺毫无保留，壮大传承队伍</li>
-                            <li>创办傩戏班，搭建平台培养青少年傩戏爱好者</li>
-                            <li>坚守原生态传承，守护傩堂戏古老文化根脉</li>
-                        </ul>
+                        <div class="stat-card-group">
+                            <div class="stat-item">
+                                <div class="stat-number">48年</div>
+                                <div class="stat-label">从艺年限</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">20+</div>
+                                <div class="stat-label">亲传弟子</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">技艺还原</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="inheritor-group" id="chizhoou">
+        <!-- 池州傩戏 姚家伟 -->
+        <div class="inheritor-group" id="chizhou2">
             <h2 class="group-title">池州傩戏传承人</h2>
             <div class="card-list">
                 <div class="inheritor-card">
                     <div class="card-header">
-                        <img src="images/inheritor3.png" alt="张宝林">
+                        <img src="images/inheritor3.png" alt="姚家伟">
                         <div class="card-title">
                             <h3>姚家伟</h3>
                             <span class="level-tag">国家级传承人</span>
-                            <span class="skill-tag">池州傩戏</span>
+                            <span class="art-tag">池州傩戏</span>
                         </div>
                     </div>
                     <div class="card-body">
-                        <div class="basic-info">
-                            <p><strong>出生年份：</strong>1965年</p>
-                            <p><strong>民族：</strong>汉族</p>
-                            <p><strong>籍贯：</strong>安徽</p>
+                        <div class="info-text">
+                            <div class="basic-info">
+                                <p><strong>出生年份：</strong>1965年</p>
+                                <p><strong>民族：</strong>汉族</p>
+                                <p><strong>籍贯：</strong>安徽</p>
+                            </div>
+                            <h4>传承资历</h4>
+                            <ul>
+                                <li>国家级非遗傩戏（池州傩戏）代表性传承人</li>
+                                <li>深耕傩戏传承与保护，兼具表演与抢救复原能力</li>
+                                <li>牵头名师带徒工程，搭建系统化傩戏传承平台</li>
+                            </ul>
+                            <h4>技艺专长</h4>
+                            <ul>
+                                <li>擅长传统剧目演绎，唱腔地道、表演极具感染力</li>
+                                <li>精通傩戏史料搜集，复原多部失传经典传统剧目</li>
+                                <li>兼顾传统传承与创新推广，适配多元展演场景</li>
+                            </ul>
+                            <h4>传承贡献</h4>
+                            <ul>
+                                <li>推动傩戏进校园、进高校，拓宽非遗传播渠道</li>
+                                <li>整理留存大量傩戏剧本、唱腔资料，夯实传承根基</li>
+                                <li>培养大批青年传承人，助力池州傩戏活态传承</li>
+                            </ul>
                         </div>
-                        <h4>传承资历</h4>
-                         <ul>
-                            <li>- 国家级非遗傩戏（池州傩戏）代表性传承人</li>
-                            <li>- 深耕傩戏传承与保护，兼具表演与抢救复原能力</li>
-                            <li>- 牵头名师带徒工程，搭建系统化傩戏传承平台</li>
-                        <h4>技艺专长</h4>
-                         <ul>
-                            <li>擅长传统剧目演绎，唱腔地道、表演极具感染力</li>
-                            <li>精通傩戏史料搜集，复原多部失传经典传统剧目</li>
-                            <li>兼顾传统传承与创新推广，适配多元展演场景</li>
-                        </p>
-                        <h4>传承贡献</h4>
-                        <ul>
-                            <li>推动傩戏进校园、进高校，拓宽非遗传播渠道</li>
-                            <li>整理留存大量傩戏剧本、唱腔资料，夯实传承根基</li>
-                            <li>培养大批青年传承人，助力池州傩戏活态传承</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        <div class="stat-card-group">
+                            <div class="stat-item">
+                                <div class="stat-number">40年</div>
+                                <div class="stat-label">从艺年限</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">青年弟子</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">25部</div>
+                                <div class="stat-label">复原剧目</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,6 +261,17 @@
             </div>
         </div>
     </div>
-</body>
 
+    <script>
+        // 回到顶部显示/隐藏
+        const goTop = document.getElementById('goTop');
+        window.addEventListener('scroll', () => {
+            goTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        // 点击返回顶部
+        goTop.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
 </html>

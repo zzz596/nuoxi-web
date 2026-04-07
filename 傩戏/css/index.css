@@ -11,17 +11,17 @@ body {
 }
 a {
     text-decoration: none;
-    color: #8B4513;
+    color: #1E3B7A;
 }
 a:hover {
-    color: #A0522D;
+    color: #346C9C;
 }
 .section-title {
     font-size: 24px;
-    color: #8B4513;
+    color: #1E3B7A;
     margin: 40px 0 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #E6E6FA;
+    border-bottom: 2px solid #22406a;
 }
 
 /* banner样式 */
@@ -45,7 +45,7 @@ a:hover {
 .nav {
     width: 100%;
     height: 60px;
-    background-color: #8B4513; 
+    background-color: #1E3B7A; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .nav ul {
@@ -67,7 +67,7 @@ a:hover {
     transition: background-color 0.3s;
 }
 .nav a.active, .nav a:hover { 
-    background-color: #A0522D;
+    background-color: #346C9C;
 }
 
 .container {
@@ -105,13 +105,16 @@ a:hover {
     opacity: 1;
 }
 .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block ;
+  margin: 80px auto 0 auto;
 }
 .carousel-btn {
     position: absolute;
-    top: 50%;
+    top: 60%;
     width: 45px;
     height: 45px;
     background: rgba(0,0,0,0.5);
@@ -124,7 +127,7 @@ a:hover {
     transition: background-color 0.3s;
 }
 .carousel-btn:hover {
-    background: rgba(139, 69, 19, 0.8);
+    background: rgba(35, 62, 214, 0.8);
 }
 .prev {
     left: 15px;
@@ -133,16 +136,19 @@ a:hover {
     right: 15px;
 }
 .intro {
-    width: 40%;
-    float: right;
-    padding: 20px;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  width: 40%;
+  float: right;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: visible;
+  padding-bottom: 40px;
+  min-height: auto;
 }
 .intro h2 {
-    color: #8B4513;
+    color: #1E3B7A;
     margin-bottom: 20px;
     font-size: 22px;
 }
@@ -156,65 +162,65 @@ a:hover {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #8B4513;
+    background-color: #1E3B7A;
     color: white;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 .more-btn:hover {
-    background-color: #A0522D;
+    background-color: #346C9C;
     color: white;
 }
 
-.hot-skill-section {
+.hot-art-section {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     margin-bottom: 40px;
 }
-.hot-skill-list {
+.hot-art-list {
     overflow: hidden;
     display: flex;
     justify-content: space-between;
 }
-.hot-skill-item {
+.hot-art-item {
     width: 23.5%;
     background-color: #f9f9f9;
     border-radius: 6px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-.hot-skill-item:hover {
+.hot-art-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
-.hot-skill-item img {
+.hot-art-item img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
-.hot-skill-item h3 {
+.hot-art-item h3 {
     padding: 15px 10px 5px;
     font-size: 18px;
-    color: #8B4513;
+    color: #1E3B7A;
 }
-.hot-skill-item p {
+.hot-art-item p {
     padding: 0 10px 10px;
     font-size: 14px;
     color: #666;
     line-height: 1.6;
 }
-.hot-skill-item a {
+.hot-art-item a {
     display: inline-block;
     margin: 0 10px 15px;
     font-size: 14px;
     padding: 5px 10px;
-    border: 1px solid #8B4513;
+    border: 1px solid #1E3B7A;
     border-radius: 4px;
 }
-.hot-skill-item a:hover {
-    background-color: #8B4513;
+.hot-art-item a:hover {
+    background-color: #1E3B7A;
     color: white;
 }
 
@@ -271,7 +277,7 @@ a:hover {
 .data-num {
     display: block;
     font-size: 36px;
-    color: #8B4513;
+    color: #1E3B7A;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -308,92 +314,157 @@ a:hover {
     font-size: 14px;
     color: #ccc;
 }
-/* 傩戏流派卡片布局 - 让按钮底部对齐 */
-.hot-skill-item {
+/* 卡片下的按钮-让按钮对齐 */
+.hot-art-item {
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 15px;
   border: 1px solid #eee;
   border-radius: 8px;
-  /* 针对没对齐的卡片，给段落加最小高度 */
-.hot-skill-item p {
-  min-height: 60px; /* 你可以根据实际文字量调整这个数值 */
+ .hot-art-item p {
+  min-height: 60px; 
 }
 }
-
-.hot-skill-item img {
+  /* 针对没对齐的卡片-调整 */
+.hot-art-item img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 12px;
-  /* 针对没对齐的卡片，给段落加最小高度 */
-.hot-skill-item p {
-  min-height: 60px; /* 你可以根据实际文字量调整这个数值 */
+.hot-art-item p {
+  min-height: 60px; 
 }
 }
 
-.hot-skill-item h3 {
+.hot-art-item h3 {
   margin: 0 0 8px 0;
   font-size: 18px;
   color: #333;
-  /* 针对没对齐的卡片，给段落加最小高度 */
-.hot-skill-item p {
-  min-height: 60px; /* 你可以根据实际文字量调整这个数值 */
+  .hot-art-item p {
+  min-height: 60px; 
 }
 }
 
-.hot-skill-item p {
+.hot-art-item p {
   flex-grow: 1;
   margin: 0 0 16px 0;
   font-size: 14px;
   line-height: 1.5;
   color: #666;
-  /* 针对没对齐的卡片，给段落加最小高度 */
-.hot-skill-item p {
-  min-height: 60px; /* 你可以根据实际文字量调整这个数值 */
+  
+.hot-art-item p {
+  min-height: 60px; 
 }
 }
 
-.hot-skill-item a {
+.hot-art-item a {
   align-self: start;
   display: inline-block;
   padding: 6px 14px;
-  background-color: #c8502e; /* 傩戏主题红 */
+  background-color: #1E3B7A; 
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
   font-size: 13px;
   transition: background-color 0.2s;
-  /* 针对没对齐的卡片，给段落加最小高度 */
-.hot-skill-item p {
-  min-height: 60px; /* 你可以根据实际文字量调整这个数值 */
+.hot-art-item p {
+  min-height: 60px; 
 }
 }
 
-.hot-skill-item a:hover {
-  background-color: #a63c1f; /*  hover 加深颜色 */
-  /* 针对没对齐的卡片，给段落加最小高度 */
-.hot-skill-item p {
-  min-height: 60px; /* 你可以根据实际文字量调整这个数值 */
+.hot-art-item a:hover {
+  background-color: #346C9C; 
+.hot-art-item p {
+  min-height: 60px; 
 }
 }
-/* 让所有流派卡片高度一致 */
-.hot-skill-list {
+.hot-art-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* 卡片之间的间距，和你之前保持一致 */
+  gap: 20px; 
 }
 
-.hot-skill-item {
-  flex: 1 1 calc(25% - 15px); /* 一行4个卡片，适配间距 */
+.hot-art-item {
+  flex: 1 1 calc(25% - 15px);
   display: flex;
   flex-direction: column;
-  height: auto; /* 让 flex 自动分配高度 */
+  height: auto; 
 }
 
-.hot-skill-item p {
-  flex-grow: 1; /* 关键：让段落撑开高度，把按钮推到底部 */
-  min-height: 60px; /* 给段落一个最小高度，避免文字太少时按钮上移 */
+.hot-art-item p {
+  flex-grow: 1;
+  min-height: 60px; 
+}
+
+/* 背景样式 */
+body {
+  background-color: #f2eade;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(150,120,90,0.05) 0, rgba(150,120,90,0.05) 1px, transparent 1px, transparent 12px);
+  background-attachment: fixed;
+}
+
+/* 全局平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+#goTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: #346C9C;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+#goTop:hover {
+  background: #1E3B7A;
+}
+
+/* 弹窗美化 */
+.img-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.95) 100%);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.img-popup.show {
+  display: flex;
+}
+.img-popup img {
+  transition: all 0.3s ease;
+  transform: scale(0.95);
+  .img-popup.show img {
+  transform: scale(1);
+}
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 12px;
+  border: 4px solid #fff;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  object-fit: contain;
+}
+.img-popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  text-shadow: 0 0 10px #000;
 }

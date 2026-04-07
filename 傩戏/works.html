@@ -8,13 +8,14 @@
 </head>
 
 <body>
+    <button id="goTop">↑</button>
     <div class="banner">
         <h1>傩戏 - 精选剧目</h1>
     </div>
     <div class="nav">
         <ul>
             <li><a href="index.html">首页</a></li>
-            <li><a href="skill.html">艺术特征</a></li>
+            <li><a href="art.html">艺术特征</a></li>
             <li><a href="inheritor.html">传承人介绍</a></li>
             <li><a href="works.html" class="active">精选剧目</a></li>
             <li><a href="contact.html">联系我们</a></li>
@@ -88,6 +89,21 @@
             </div>
         </div>
     </div>
+  <script>
+// 回到顶部显示/隐藏
+const goTop = document.getElementById('goTop');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 300){
+    goTop.style.display = 'block';
+  }else{
+    goTop.style.display = 'none';
+  }
+});
+// 点击返回顶部
+goTop.addEventListener('click', ()=>{
+  window.scrollTo({top:0});
+});
+</script>
 </body>
 
 </html>

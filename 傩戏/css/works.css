@@ -3,6 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: "Microsoft Yahei", sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+}
+a {
+    text-decoration: none;
+    color: #1E3B7A;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #346C9C;
+}
 .banner {
     width: 100%;
     height: 380px;
@@ -22,7 +35,7 @@
 .nav {
     width: 100%;
     height: 60px;
-    background-color: #8B4513;
+    background-color: #1E3B7A;
 }
 .nav ul {
     list-style: none;
@@ -40,8 +53,8 @@
     text-decoration: none;
     display: block;
 }
-.nav a:hover {
-    background-color: #A0522D;
+.nav a.active, .nav a:hover { 
+    background-color: #346C9C;
 }
 .works-container {
     width: 1200px;
@@ -51,9 +64,9 @@
     margin-bottom: 20px;
 }
 .works-category h2 {
-    color: #8B4513;
+    color: #1E3B7A;
     margin-bottom: 15px;
-    border-bottom: 2px solid #E6E6FA;
+    border-bottom: 2px solid #22406a;
     padding-bottom: 10px;
 }
 .works-list {
@@ -112,36 +125,68 @@
     font-size: 16px;
     margin-bottom: 10px;
 }
-/* 剧目分类容器 */
+/* 剧目分类*/
 .works-category {
   margin-bottom: 40px;
 }
 
 /* 分类标题 */
 .works-category h3 {
-  text-align: left; /* 标题保持左对齐，和你截图一致 */
+  text-align: left; 
   margin-bottom: 15px;
-  color: #8b3100;
+  color: #1E3B7A;
 }
 
-/* 卡片列表容器 - 关键居中代码 */
+/* 卡片列表 */
 .works-list {
   display: flex;
-  justify-content: center; /* 让卡片在容器里水平居中 */
-  gap: 20px; /* 卡片之间的间距 */
-  flex-wrap: wrap; /* 自动换行，适配不同屏幕 */
+  justify-content: center; 
+  gap: 20px; 
+  flex-wrap: wrap; 
 }
 
-/* 单个卡片样式 */
+/* 卡片样式 */
 .work-item {
-  width: 280px; /* 固定卡片宽度 */
-  text-align: center; /* 图片和文字居中 */
+  width: 280px;
+  text-align: center;
 }
 
 .work-item img {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* 保证图片不变形 */
+  object-fit: cover;
   border-radius: 4px;
   margin-bottom: 8px;
+}
+
+/* 背景样式 */
+body {
+  background-color: #f2eade;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(150,120,90,0.05) 0, rgba(150,120,90,0.05) 1px, transparent 1px, transparent 12px);
+  background-attachment: fixed;
+}
+
+/* 全局平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+#goTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: #346C9C;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+#goTop:hover {
+  background: #1E3B7A;
 }

@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <button id="goTop">↑</button>
     <div class="banner">
         <h1>傩戏 - 中国非物质文化遗产</h1>
     </div>
@@ -15,7 +16,7 @@
     <div class="nav">
         <ul>
             <li><a href="index.html" class="active">首页</a></li>
-            <li><a href="skill.html">艺术特征</a></li>
+            <li><a href="art.html">艺术特征</a></li>
             <li><a href="inheritor.html">传承人介绍</a></li>
             <li><a href="works.html">精选剧目</a></li>
             <li><a href="contact.html">联系我们</a></li>
@@ -36,42 +37,50 @@
                 </div>
                 <button class="carousel-btn prev">&lt;</button>
                 <button class="carousel-btn next">&gt;</button>
+                
             </div>
             <div class="intro">
-                <h2>傩戏简介</h2>
-                <p>傩戏是在民间祭祀仪式基础上，吸纳民间歌舞与戏曲元素发展而成的传统戏剧形式，起源于远古驱疫祈福的傩祭活动，先秦时期便已有巫歌傩舞雏形，历经千年传承演变，逐步形成完整的戏剧表演体系。2006年，傩戏被列入首批国家级非物质文化遗产名录，项目编号Ⅳ-89，全国多地傩戏分支先后纳入非遗保护体系。</p>
-                <p>傩戏广泛流行于贵州、安徽、湖南、湖北、江西、四川等多个省份，因地形成诸多流派，表演多佩戴手工木雕彩绘面具，以锣鼓为主要伴奏，用方言演唱，风格古朴粗犷，兼具娱神与娱人属性。作为历史、民俗、民间宗教与原始戏剧的综合体，傩戏留存着大量上古至近代的文化印记，兼具极高的艺术、历史与民俗研究价值，是我国现存最古老、传承最完整的传统戏曲形态之一。</p>
-                <p>保护和传承，不仅是对历史的尊重，更是对未来的责任。我们希望通过本网站，让更多人了解傩戏、爱上傩戏，共同守护这份珍贵的文化遗产。</p>
-                <a href="skill.html" class="more-btn">了解更多</a>
+  <h2>傩戏简介</h2>
+  <div id="readText" class="intro-text">
+    <p>傩戏是在民间祭祀仪式基础上，吸纳民间歌舞与戏曲元素发展而成的传统戏剧形式，起源于远古驱疫祈福的傩祭活动，先秦时期便已有巫傩舞雏形，历经千年传承演变，逐步形成完整的戏剧表演体系。2006年，傩戏被列入首批国家级非物质文化遗产名录，项目编号Ⅳ-89，全国各地傩戏分支先后纳入非遗保护体系。</p>
+    <p>傩戏广泛流行于贵州、安徽、湖南、湖北、江西、四川等多个省份，因地形成诸多流派，表演多佩戴手工木雕彩绘面具，以锣鼓为主要伴奏，用方言演唱，风格古朴粗犷，兼具娱神与娱人属性。作为历史、民俗、民间宗教与原始戏剧的综合体，傩戏留存着大量上古至近代的文化印记，兼具极高的艺术、历史与民俗研究价值，是我国现存最古老、传承最完整的传统戏曲形态之一。</p>
+    <p>保护和传承，不仅是对历史的尊重，更是对未来的责任。我们希望通过本网站，让更多人了解傩戏、爱上傩戏，共同守护这份珍贵的文化遗产。</p>
+  </div>
+  <div class="intro-buttons">
+    <a href="art.html" class="more-btn">了解更多</a>
+<button onclick="toggleSpeech()" class="voice-btn" id="voiceBtn">🔊 AI语音讲解</button>
+  </div>
+</div>
+
             </div>
         </div>
 
-        <div class="hot-skill-section">
+        <div class="hot-art-section">
             <h2 class="section-title">傩戏流派</h2>
-            <div class="hot-skill-list">
-                <div class="hot-skill-item">
-                    <img src="images/skill1.png" alt="恩施傩戏">
+            <div class="hot-art-list">
+                <div class="hot-art-item">
+                    <img src="images/art1.png" alt="恩施傩戏">
                     <h3>恩施傩戏（湖北）</h3>
                     <p>分“傩愿戏”与“坛傩”，前者融入花鼓戏技巧，后者保留明代祭祖仪式，面具制作工艺独特</p>
-                    <a href="skill.html#enshi">查看详情</a>
+                    <a href="art.html">查看详情</a>
                 </div>
-                <div class="hot-skill-item">
-                    <img src="images/skill2.png" alt="池州傩戏">
+                <div class="hot-art-item">
+                    <img src="images/art2.png" alt="池州傩戏">
                     <h3>池州傩戏（安徽）</h3>
                     <p>以宗族为单位演出，每年春秋两祭，保留《刘文龙》等古剧目，被誉为“无傩不成村”</p>
-                    <a href="skill.html#chizhou">查看详情</a>
+                    <a href="art.html">查看详情</a>
                 </div>
-                <div class="hot-skill-item">
-                    <img src="images/skill3.png" alt="德江傩堂戏">
+                <div class="hot-art-item">
+                    <img src="images/art3.png" alt="德江傩堂戏">
                     <h3>德江傩堂戏(贵州)</h3>
                     <p>被称为“中国戏剧活，完整保留汉代傩仪传统，表演包含复化石”杂法事 </p>
-                    <a href="skill.html#dejiang">查看详情</a>
+                    <a href="art.html">查看详情</a>
                 </div>
-                <div class="hot-skill-item">
-                    <img src="images/skill4.png" alt="武安傩戏">
+                <div class="hot-art-item">
+                    <img src="images/art4.png" alt="武安傩戏">
                     <h3>武安傩戏(河北)</h3>
                     <p>具宋代宫廷傩遗风，角色“掌竹”为宋金杂剧引戏人遗存</p>
-                    <a href="skill.html#wuan">查看详情</a>
+                    <a href="art.html">查看详情</a>
                 </div>
             </div>
         </div>
@@ -132,6 +141,60 @@
                 <div class="social-icons">
                     <span>微博</span>
                     <span>抖音</span>
+            
+<script>
+const synth = window.speechSynthesis;
+let utterance = null;
+let isPlaying = false;
+let isPaused = false;
+speechSynthesis.onvoiceschanged = () => {
+  const voices = synth.getVoices();
+};
+function toggleSpeech() {
+  const voiceBtn = document.getElementById('voiceBtn');
+  const text = document.getElementById("readText").innerText;
+  if (synth.speaking && !synth.paused) {
+    synth.pause();
+    isPaused = true;
+    voiceBtn.textContent = "▶️ 继续播放";
+    voiceBtn.classList.remove('playing');
+    return;
+  }
+  if (synth.paused) {
+    synth.resume();
+    isPaused = false;
+    voiceBtn.textContent = "⏸️ 暂停播放";
+    voiceBtn.classList.add('playing');
+    return;
+  }
+  if (utterance) {
+    synth.cancel(); 
+  }
+  utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "zh-CN";
+  utterance.rate = 0.9;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+  const voices = synth.getVoices();
+  const chineseVoice = voices.find(voice => 
+    voice.lang === 'zh-CN' && (voice.name.includes('Female') || voice.name.includes('女'))
+  ) || voices.find(voice => voice.lang === 'zh-CN');
+  
+  if (chineseVoice) utterance.voice = chineseVoice;
+  utterance.onend = () => {
+    isPlaying = false;
+    isPaused = false;
+    voiceBtn.textContent = "🔊 AI语音讲解";
+    voiceBtn.classList.remove('playing');
+  };
+  synth.speak(utterance);
+  isPlaying = true;
+  isPaused = false;
+  voiceBtn.textContent = "⏸️ 暂停播放";
+  voiceBtn.classList.add('playing');
+}
+</script>
+
                 </div>
             </div>
         </div>
@@ -163,6 +226,64 @@
             showItem(currentIndex);
         }, 3000);
     </script>
+
+    <script>
+// 回到顶部显示/隐藏
+const goTop = document.getElementById('goTop');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 300){
+    goTop.style.display = 'block';
+  }else{
+    goTop.style.display = 'none';
+  }
+});
+// 点击返回顶部
+goTop.addEventListener('click', ()=>{
+  window.scrollTo({top:0});
+});
+</script>
+
+<div class="img-popup">
+  <span class="close">&times;</span>
+  <img src="" alt="">
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  let popup = document.querySelector('.img-popup');
+  let popupImg = popup.querySelector('img');
+  let close = document.querySelector('.close');
+
+  function getCurrentImg(){
+    let active = document.querySelector('.carousel-item.active img');
+    return active ? active.src : '';
+  }
+
+  document.querySelector('.carousel').onclick = function(){
+    popupImg.src = getCurrentImg();
+    popup.style.display = "flex";
+  };
+
+  close.onclick = function(){ popup.style.display = "none"; };
+  popup.onclick = function(e){
+    if(e.target === popup) popup.style.display = "none";
+  };
+});
+</script>
+
+<style>
+.img-popup{
+  position:fixed; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.9); display:none;
+  justify-content:center; align-items:center; z-index:9999;
+}
+.img-popup img{ max-width:90%; max-height:90%; }
+.img-popup .close{
+  position:absolute; top:20px; right:30px;
+  color:white; font-size:40px; cursor:pointer;
+}
+.carousel-item img{ cursor:zoom-in !important; }
+</style>
 </body>
 
 </html>

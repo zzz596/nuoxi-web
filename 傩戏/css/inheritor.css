@@ -10,11 +10,11 @@ body {
 }
 a {
     text-decoration: none;
-    color: #8B4513;
+    color: #1E3B7A;
     transition: color 0.3s;
 }
 a:hover {
-    color: #A0522D;
+    color: #346C9C;
 }
 
 .banner {
@@ -38,7 +38,7 @@ a:hover {
 .nav {
     width: 100%;
     height: 60px;
-    background-color: #8B4513; 
+    background-color: #1E3B7A; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .nav ul {
@@ -60,7 +60,7 @@ a:hover {
     transition: background-color 0.3s;
 }
 .nav a.active, .nav a:hover { 
-    background-color: #A0522D;
+    background-color: #346C9C;
 }
 
 .inheritor-nav {
@@ -87,8 +87,8 @@ a:hover {
     background-color: white;
 }
 .nav-container a:hover {
-    background-color: #f5f5dc;
-    color: #8B4513;
+    background-color: #AED0EE;
+    color: #1E3B7A;
     font-weight: 500;
 }
 
@@ -101,11 +101,11 @@ a:hover {
     margin-bottom: 50px;
 }
 .group-title {
-    color: #8B4513;
+    color: #1E3B7A;
     font-size: 26px;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #E6E6FA;
+    border-bottom: 2px solid #22406a;
 }
 .card-list {
     display: flex;
@@ -143,23 +143,23 @@ a:hover {
 }
 .card-title h3 {
     font-size: 22px;
-    color: #8B4513;
+    color: #1E3B7A;
     margin-bottom: 8px;
 }
 .level-tag {
     display: inline-block;
     padding: 3px 10px;
-    background-color: #8B4513;
+    background-color: #1E3B7A;
     color: white;
     border-radius: 15px;
     font-size: 12px;
     margin-right: 8px;
 }
-.skill-tag {
+.art-tag {
     display: inline-block;
     padding: 3px 10px;
-    background-color: #f5f5dc;
-    color: #8B4513;
+    background-color: #AED0EE;
+    color: #1E3B7A;
     border-radius: 15px;
     font-size: 12px;
 }
@@ -228,11 +228,11 @@ a:hover {
   border-bottom: 1px solid #eee;
 }
 
-/* 头像样式 */
+/* 头像 */
 .inheritor-avatar img {
   width: 80px;
   height: 80px;
-  border-radius: 50%; /* 圆形头像 */
+  border-radius: 50%; 
   object-fit: cover;
 }
 
@@ -245,10 +245,10 @@ a:hover {
 .inheritor-info h3 {
   margin: 0 0 8px 0;
   font-size: 20px;
-  color: #8b3100; /* 傩戏红棕色 */
+  color: #1E3B7A; 
 }
 
-/* 标签（国家级传承人/流派） */
+/* 标签 */
 .inheritor-tag,
 .inheritor-type {
   display: inline-block;
@@ -260,15 +260,95 @@ a:hover {
   color: white;
 }
 .inheritor-tag {
-  background-color: #c8502e; /* 红色标签 */
+  background-color: #346C9C; 
 }
 .inheritor-type {
-  background-color: #d4a76a; /* 金色标签 */
+  background-color: #AED0EE; 
 }
 
 /* 基本信息行 */
 .inheritor-basic p {
   margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 背景样式 */
+body {
+  background-color: #f2eade;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(150,120,90,0.05) 0, rgba(150,120,90,0.05) 1px, transparent 1px, transparent 12px);
+  background-attachment: fixed;
+}
+
+/* 全局平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+#goTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: #346C9C;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+#goTop:hover {
+  background: #1E3B7A;
+}
+
+/* 数据卡片 */
+.inheritor-card .card-body {
+  display: flex;
+  align-items: center;    
+  justify-content: space-between;
+  gap: 90px;
+  padding: 20px 50px;
+  min-height: 450px;
+}
+
+.info-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 130px;
+  flex-shrink: 0;
+  align-items: stretch;
+  align-self: center;
+  margin-left: auto;
+}
+
+.stat-item {
+  background: #f8f5f0;
+  border-left: 4px solid #1a3b7a;
+  padding: 16px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: 100%;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a3b7a;
+  margin-bottom: 4px;
+}
+
+.stat-label {
   font-size: 14px;
   color: #666;
 }
